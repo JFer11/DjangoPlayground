@@ -1,0 +1,7 @@
+Superuser:
+    username: superuser
+    password: user1234
+
+User with less permissions (Group="Personal"):
+    username: test_usuario_personal
+    password: personal1234
