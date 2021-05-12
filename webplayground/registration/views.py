@@ -3,7 +3,7 @@ from django import forms
 from django.views.generic import CreateView, UpdateView
 from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
-from registration.forms import UserCreationFromWithEmail, ProfileForm
+from registration.forms import UserCreationFromWithEmail, ProfileForm, EmailForm
 from .models import Profile
 
 
@@ -16,7 +16,7 @@ class UserSignUp(CreateView):
 
     def get_form(self, form_class=None):
         form = super(UserSignUp, self).get_form()
-        # Modify in execution time the form.
+        # Modify the form in execution time.
         form.fields['username'].widget = forms.TextInput(attrs={
             'class': 'form-control mb-2',
             'placeholder': 'Nombre del usuario'
@@ -46,3 +46,24 @@ class ProfileUpdate(UpdateView):
     def get_object(self):
         profile, created = Profile.objects.get_or_create(user=self.request.user)
         return profile
+
+
+@method_decorator(login_required, name='dispatch')
+class EmailUpdate(UpdateView):
+    form_class = EmailForm
+    success_url = reverse_lazy('profile')
+    template_name = 'registration/profile_email_form.html'
+
+    def get_object(self):
+        # Get the object that we are going to modify
+        # Read how django handles UpdateViews.
+        return self.request.user
+
+    def get_form(self, form_class=None):
+        form = super(EmailUpdate, self).get_form()
+        # Modify the form in execution time.
+        form.fields['email'].widget = forms.EmailInput(attrs={
+            'class': 'form-control mb-2',
+            'placeholder': 'Email'
+        })
+        return form
