@@ -1,8 +1,10 @@
-from django.contrib.auth.models import User
 from django.urls import reverse_lazy
 from django import forms
-from django.views.generic import CreateView
-from registration.forms import UserCreationFromWithEmail
+from django.views.generic import CreateView, UpdateView
+from django.utils.decorators import method_decorator
+from django.contrib.auth.decorators import login_required
+from registration.forms import UserCreationFromWithEmail, ProfileForm
+from .models import Profile
 
 
 class UserSignUp(CreateView):
@@ -33,3 +35,14 @@ class UserSignUp(CreateView):
         })
         # We can do this: "form.fields['username'].label = '' ", however, lets modify the css in signup.html directly.
         return form
+
+
+@method_decorator(login_required, name='dispatch')
+class ProfileUpdate(UpdateView):
+    form_class = ProfileForm
+    success_url = reverse_lazy('profile')
+    template_name = 'registration/profile_form.html'
+    
+    def get_object(self):
+        profile, created = Profile.objects.get_or_create(user=self.request.user)
+        return profile

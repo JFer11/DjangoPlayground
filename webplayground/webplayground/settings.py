@@ -130,7 +130,7 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Auth redirects
-LOGIN_REDIRECT_URL = 'home'
+# LOGIN_REDIRECT_URL = 'home'  # Default='profile'
 LOGOUT_REDIRECT_URL = 'home'
 
 # Emails
@@ -140,5 +140,9 @@ if DEBUG:
 else:
      # Configure a a real email for production environment
     pass
+
+# Media files
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media_files')
+MEDIA_URL = '/media/'
 
 
