@@ -18,11 +18,14 @@ from django.urls import path, include
 from django.conf import settings
 from pages.urls import pages_patterns
 from profiles.urls import profiles_patterns
+from messenger.urls import messenger_patterns
+
 
 urlpatterns = [
     path('', include('core.urls')),
     path('pages/', include(pages_patterns)),
     path('profiles/', include(profiles_patterns)),
+    path('messenger/', include(messenger_patterns)),
     path('admin/', admin.site.urls),
 
     # Auth paths

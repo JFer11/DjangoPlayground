@@ -5,3 +5,11 @@ Superuser:
 User with less permissions (Group="Personal"):
     username: test_usuario_personal
     password: personal1234
+
+Users with messages between them (worth seeing template: '/messenger/'. One of the following users must be logged):
+    username: fulano
+    password: contra123
+
+    username: federico
+    password: contra123
+
