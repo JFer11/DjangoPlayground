@@ -31,8 +31,12 @@ class ThreadManager(models.Manager):
 class Thread(models.Model):
     users = models.ManyToManyField(User, related_name='threads')
     messages = models.ManyToManyField(Message)
+    updated = models.DateTimeField(auto_now=True)
 
     objects = ThreadManager()
+
+    class Meta:
+        ordering = ['-updated']
 
 
 def messages_changed(sender, **kwargs):
@@ -50,6 +54,9 @@ def messages_changed(sender, **kwargs):
                 false_pk_set.add(msg_pk)
 
     pk_set.difference_update(false_pk_set)
+
+    # Many to Many Field does not update updated value in the model. We have to force it here.
+    instance.save()
 
 
 m2m_changed.connect(messages_changed, Thread.messages.through)
