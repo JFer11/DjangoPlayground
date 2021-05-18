@@ -7,7 +7,7 @@ The goal of this project was simply to learn Django.
 In this project you will find many different features to explore the potential of Django. Many functionalities were added throughout the commits.
 
 
-In simple words, main functionalities are:
+In simple words, **main functionalities** are:
 - A complete registration and login system is provided.
 - Registered users will have their own profile and will be able to change their information on the website.
 - A complete password recovery system is also provided, an email will be sent.
@@ -20,7 +20,7 @@ In simple words, main functionalities are:
     
 --- 
 
-In terms of technical aspects, the functionalities described above were developed with the following Django features:
+In terms of **technical aspects**, the functionalities described above were developed with the following Django features:
 
 1. Full use of different class-based views.
 2. Complete customization of CRUD CBV.
@@ -40,10 +40,11 @@ In terms of technical aspects, the functionalities described above were develope
 16. Much more!
 
 ### To run the project:
--Create a virtual environment.
--Install the requirements.
--In the "webplayground" directory, run: "python manage.py runserver"
--Enjoy the website and explore its functionalities. 
+
+- Create a virtual environment.
+- Install the requirements.
+- In the "webplayground" directory, run: "python manage.py runserver"
+- Enjoy the website and explore its functionalities. 
 
       
 Comments or suggestions are welcome. :)
