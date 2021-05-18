@@ -9,16 +9,15 @@ In this project you will find many different features to explore the potential o
 
 
 In simple words, main functionalities are:
-    
-    - A complete registration and login system is provided.
-    - Registered users will have their own profile and will be able to change their information on the website.
-    - A complete password recovery system is also provided, an email will be sent.
-    - Public profiles of other users are displayed.
-    - Users can send messages to other users on the website, a user can see all their chats in a message template and can reply to them in real time.
-    - There are multiple levels of user permissions, that allows to manage "Paginas" content. "Paginas" template is loaded with dynamic content added from the website with a super user or from the admin page.
-    - Also, each post can be created, deleted, listed or modified on the website if you are super user.
-    - A customized administration page that provides complete control over the entire system and all its models. 
-    - And many more details that improve the user experience.
+- A complete registration and login system is provided.
+- Registered users will have their own profile and will be able to change their information on the website.
+- A complete password recovery system is also provided, an email will be sent.
+- Public profiles of other users are displayed.
+- Users can send messages to other users on the website, a user can see all their chats in a message template and can reply to them in real time.
+- There are multiple levels of user permissions, that allows to manage "Paginas" content. "Paginas" template is loaded with dynamic content added from the website with a super user or from the admin page.
+- Also, each post can be created, deleted, listed or modified on the website if you are super user.
+- A customized administration page that provides complete control over the entire system and all its models. 
+- And many more details that improve the user experience.
     
     
 In terms of technical aspects, the functionalities described above were developed with the following Django features:
@@ -41,11 +40,10 @@ In terms of technical aspects, the functionalities described above were develope
 16. Much more!
 
 ###To run the project:
-
-    Create a virtual environment.
-    Install the requirements.
-    In the "webplayground" directory, run: "python manage.py runserver"
-    Enjoy the website and explore its functionalities. 
+-Create a virtual environment.
+-Install the requirements.
+-In the "webplayground" directory, run: "python manage.py runserver"
+-Enjoy the website and explore its functionalities. 
 
       
 Comments or suggestions are welcome. :)
