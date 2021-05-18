@@ -1,7 +1,6 @@
 # DjangoPlayground
----
 
-###Welcome brave soul!
+### Welcome brave soul!
 
 The goal of this project was simply to learn Django.
 
@@ -19,7 +18,8 @@ In simple words, main functionalities are:
 - A customized administration page that provides complete control over the entire system and all its models. 
 - And many more details that improve the user experience.
     
-    
+--- 
+
 In terms of technical aspects, the functionalities described above were developed with the following Django features:
 
 1. Full use of different class-based views.
@@ -39,7 +39,7 @@ In terms of technical aspects, the functionalities described above were develope
 15. Asynchronous messages with JS.
 16. Much more!
 
-###To run the project:
+### To run the project:
 -Create a virtual environment.
 -Install the requirements.
 -In the "webplayground" directory, run: "python manage.py runserver"
