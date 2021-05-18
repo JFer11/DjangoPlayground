@@ -1,7 +1,7 @@
 # DjangoPlayground
------
+---
 
-####Welcome brave soul!
+###Welcome brave soul!
 
 The goal of this project was simply to learn Django.
 
@@ -9,6 +9,7 @@ In this project you will find many different features to explore the potential o
 
 
 In simple words, main functionalities are:
+    
     - A complete registration and login system is provided.
     - Registered users will have their own profile and will be able to change their information on the website.
     - A complete password recovery system is also provided, an email will be sent.
@@ -39,7 +40,7 @@ In terms of technical aspects, the functionalities described above were develope
 15. Asynchronous messages with JS.
 16. Much more!
 
-####To run the project:
+###To run the project:
 
     Create a virtual environment.
     Install the requirements.
